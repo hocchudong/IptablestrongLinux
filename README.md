@@ -82,7 +82,7 @@ VD:
 Câu lệnh này có ý nghĩa. Đối với gói tin tcp có port đích là 80 thì sẽ được đổi địa chỉ đích thành 10.0.30.100
 ví dụ trên đã định nghĩa rõ cho chúng ta:nói ra chọn bảng NAT áp dụng rule và trong chain PREROUTING sử dụng target DNAT.
 
-- **Chain** POSROUTING : đây là chain dùng để thay đổi địa chỉ nguồn của gói tin và targer được sư dụng là SNAT (source NAT) 
+- **Chain** POSTROUTING : đây là chain dùng để thay đổi địa chỉ nguồn của gói tin và targer được sư dụng là SNAT (source NAT) 
 VD:
 ```
 #iptables -t NAT -A POSTROUTING -p tcp -j SNAT --to-source 10.0.30.200
