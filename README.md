@@ -74,7 +74,7 @@ Mới đầu tiên khi tìm hiểu về iptables tôi rất loạn các khái ni
 
 ##### a. Bảng NAT
 Trong bảng NAT có các **chain** và có 3 chain được xây dựng sẵn trong table NAT:
-- **Chain** PREROUTING : đấy là chain dùng để thay đổi địa chỉ đích của gói tin và trong chain FREROUTING target(tác vụ) được sử dụng là DNAT (destination NAT):
+- **Chain** PREROUTING : đấy là chain dùng để thay đổi địa chỉ đích của gói tin và trong chain PREROUTING target(tác vụ) được sử dụng là DNAT (destination NAT):
 VD:
 ```
 # iptables -t NAT -A PREROUTING -p tcp --dport 80 -j DNAT --to-destination 10.0.30.100:80
